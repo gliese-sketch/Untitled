@@ -1,8 +1,8 @@
-import Header from "./components/Header";
-import Aside from "./components/Aside";
-import Form from "./components/Form";
+import Header from "@/components/Header";
+import Aside from "@/components/Aside";
+import Form from "@/components/Form";
 
-function App() {
+function Home() {
   return (
     <div>
       <h1 className="text-5xl font-bold text-red-500 hover:text-blue-300">
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
