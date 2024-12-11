@@ -59,7 +59,7 @@ function Form() {
           type="submit"
           className="flex justify-center gap-2 rounded-lg bg-stone-950 p-2 text-white"
         >
-          Let's get started{" "}
+          Let's get started
           <TbFlareFilled size={20} className="text-lime-500" />
         </button>
       </form>
