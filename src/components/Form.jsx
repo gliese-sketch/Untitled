@@ -33,7 +33,7 @@ function Form() {
       mode: "no-cors",
       body: formData,
     }).then(() => {
-      console.log("Tu jaake dekh le", utils.entriesUrl);
+      console.log("Form Submitted", utils.entriesUrl);
     });
   };
 
@@ -49,7 +49,7 @@ function Form() {
         <input
           type="text"
           {...register("fullname", {
-            required: "Please apna naam batao",
+            required: "Please enter your name",
           })}
           id="fullname"
           placeholder="Your name"
@@ -62,10 +62,10 @@ function Form() {
         <input
           type="text"
           {...register("email", {
-            required: "Email daal bhai",
+            required: "Please enter your email",
             pattern: {
               value: /[\w]*@*[a-z]*\.*[\w]{5,}(\.)*(com)*(@gmail\.com)/g,
-              message: "Temp mail chod, gmail daal de",
+              message: "Only gmail is allowed",
             },
           })}
           id="email"
@@ -80,7 +80,7 @@ function Form() {
             required: "Please enter a message",
             minLength: {
               value: 10,
-              message: "jada chota nhi hogya",
+              message: "Be more descriptive",
             },
           })}
           id="message"
@@ -104,7 +104,7 @@ function Form() {
                 <input
                   type="checkbox"
                   {...register("services", {
-                    required: "Atleast one!",
+                    required: "Select atleast one!",
                   })}
                   value={service}
                   className="size-6"
